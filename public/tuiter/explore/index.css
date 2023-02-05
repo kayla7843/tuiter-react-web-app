@@ -4,11 +4,23 @@ input#search-tuiter {
     border: none;
     background: rgb(47, 51, 54);
     width: 100%;
+    height: 25px;
+}
+
+.wd-font-size-20 {
+    font-size: 30px;
+    width: 30px;
 }
 
 .wd-blue-link {
     text-decoration: none;
     color: rgb(29, 161, 242);
+}
+
+.wd-blue-link-setting {
+    text-decoration: none;
+    color: rgb(29, 161, 242);
+    font-size: 25px;
 }
 
 .wd-flex-container {
@@ -80,9 +92,9 @@ div#selected-category {
     margin-left: auto;
 }
 
-.wd-top-bottom-padding-10 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.wd-top-bottom-padding-12 {
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 
