@@ -1,0 +1,97 @@
+
+input#search-tuiter {
+    border-radius: 45px;
+    border: none;
+    background: rgb(47, 51, 54);
+    width: 100%;
+}
+
+.wd-blue-link {
+    text-decoration: none;
+    color: rgb(29, 161, 242);
+}
+
+
+.wd-flex-container {
+    display: flex;
+}
+
+
+.wd-break {
+    width: auto;
+    height: 5px;
+    background-color: #282c34;
+}
+
+.wd-left-padding-16 {
+    padding-left: 16px;
+}
+.wd-right-padding-12 {
+    padding-right: 12px;
+}
+
+.wd-flex-grow {
+    flex-grow: 1;
+}
+
+.wd-left-padding-32 {
+    padding-left: 32px;
+}
+
+div#selected-category {
+    border-bottom-color: rgb(29, 161, 242);
+    border-bottom: solid 2px;
+}
+
+
+.wd-category-up-down-padding {
+    padding-top: 16px;
+    padding-bottom: 16px
+}
+
+.wd-left-right-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.wd-font-size-15 {
+    font-size: 15px;
+}
+
+.wd-profile-image {
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+}
+
+.wd-profile-name {
+    font-size: 13px;
+    color: #E7E9EA;
+}
+
+.wd-tuit-image {
+    border-radius: 15%;
+    height: 100px;
+    width: 100px;
+    float: right;
+    padding: 10px 16px;
+}
+
+.wd-right-container {
+    margin-left: auto;
+}
+
+.wd-top-bottom-padding-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+

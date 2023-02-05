@@ -1,0 +1,48 @@
+.wd-font-size-20-white {
+    font-size: 20px;
+    color: #E7E9EA;
+}
+
+.wd-circle-image-48 {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+
+.wd-left-padding-12 {
+    padding-left: 12px;
+}
+
+.wd-max-width-content-506 {
+    max-width: 506px;
+
+}
+
+.wd-bottom-padding-12 {
+    padding-bottom: 12px;
+}
+
+.wd-image-504-264 {
+    width: 504px;
+    height: 264px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.wd-rounded-border {
+    border-radius: 5%;
+    border: solid 1px dimgray;
+}
+
+.wd-padding-12 {
+    padding: 12px;
+}
+
+.wd-max-width-content-504 {
+    max-width: 500px;
+}
+
+.wd-remove-margin {
+    margin:0;
+}
+
