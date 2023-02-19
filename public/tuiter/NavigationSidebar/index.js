@@ -94,9 +94,9 @@ const NavigationSidebar = () => {
           <a href="" class="list-group-item list-group-item-action">
             <div class="row justify-content-start align-items-center">
               <div class="col-3">
-                <span class="fa-stack wd-fa-half">
+                <span class="fa-stack wd-stack-icon">
                   <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+                  <i class="fas fa-ellipsis-h fa-stack-1x wd-setting-color"></i>
                 </span>
               </div>
               <div class="col">

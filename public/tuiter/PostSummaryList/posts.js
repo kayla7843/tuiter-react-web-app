@@ -16,8 +16,8 @@ export default [
     },
     {
         topic: 'Web Development',
-        userName: '',
-        title: 'jQuery',
+        userName: 'jQuery',
+        title: '',
         time: 'last week',
         image: '../../images/jquery-square-logo.webp',
         tweets: '122K',

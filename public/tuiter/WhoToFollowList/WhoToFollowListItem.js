@@ -2,7 +2,7 @@ const WhoToFollowListItem = (who) => {
     return (`
 
            <li class="list-group-item d-flex flex-row">
-              <div class="d-flex pe-2">
+              <div class="d-flex pe-4">
                    <img class="rounded-circle wd-tuit-profile-image"
                         src="${who.avatarIcon}"
                    />
