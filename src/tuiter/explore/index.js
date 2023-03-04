@@ -31,7 +31,7 @@ const ExploreComponent = () => {
                 <li className="nav-item">
                     <a className="nav-link" href="sports.html">Sports</a>
                 </li>
-                <li className="nav-item d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                <li className="nav-item d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
                     <a className="nav-link" href="entertainment.html">Entertainment</a>
                 </li>
             </ul>
