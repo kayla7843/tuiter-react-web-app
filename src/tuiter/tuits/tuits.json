@@ -26,5 +26,20 @@
     "likes": 3456,
     "handle": "@tesla",
     "tuit": "Autopilot is an advanced driver assistance system that assist your car with steering, accelerating, and braking for other vehicles and pedestrains within its lanes. It assists with the most burdensome parts of driving."
+  },
+  {
+    "_id": 678,
+    "topic": "Space",
+    "userName": "SpaceX",
+    "time": "2h",
+    "title": "Tesla Cybertruck lands on Mars and picks up the Curiosity rover on it's 6' bed.",
+    "image": "spacex-logo.png",
+    "liked": true,
+    "replies": 123,
+    "retuits": 432,
+    "likes": 2345,
+    "handle": "@spacex",
+    "tuit": "Tesla Cybertruck lands on Mars and picks up the Curiosity rover on it's 6' bed. Cybertruck is built with an exterior shell made for ultimate durability and passenger protection."
   }
+
 ]
