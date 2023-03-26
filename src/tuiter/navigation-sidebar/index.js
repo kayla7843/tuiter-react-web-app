@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationSidebarItem from "./navigation-sidebar-item";
+import {Link} from "react-router-dom";
 
 const NavigationSidebar = (
     {
@@ -8,20 +8,17 @@ const NavigationSidebar = (
 ) => {
     return (
         <div className="list-group">
-            <a className="list-group-item">
+            <div className="list-group-item">
                 <div className="row justify-content-start align-items-center">
-                    <div className="col-3">
-                        {NavigationSidebarItem("bi-twitter", "")}
-                    </div>
                     <div className="col">
-                        <div className="d-none d-xl-block"></div>
+                        <div className="d-none d-xl-block"> Tuiter</div>
                     </div>
                 </div>
-            </a>
+            </div>
 
 
-            <a className={`list-group-item
-                    ${active === 'home'?'active':''}`}>
+            <Link className={`list-group-item
+                    ${active === 'home'?'active':''}`} to="/tuiter">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
                         <i className="bi bi-house-fill"></i>
@@ -30,10 +27,10 @@ const NavigationSidebar = (
                         <div className="d-none d-xl-block">Home</div>
                     </div>
                 </div>
-            </a>
+            </Link>
 
-            <a className={`list-group-item
-                    ${active === 'explore'?'active':''}`}>
+            <Link className={`list-group-item
+                    ${active === 'explore'?'active':''}`} to="/tuiter/explore">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
                         <i className="bi bi-hash"></i>
@@ -42,45 +39,58 @@ const NavigationSidebar = (
                         <div className="d-none d-xl-block">Explore</div>
                     </div>
                 </div>
-            </a>
+            </Link>
 
-            <a className={`list-group-item
-                    ${active === 'notifications'?'active':''}`}>
+            <Link className={`list-group-item
+                    ${active === 'labs'?'active':''}`} to="/">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
-                        <i className="bi bi-bell-fill"></i>
+                        <i className="bi bi-asterisk"></i>
+                    </div>
+                    <div className="col">
+                        <div className="d-none d-xl-block">Labs</div>
+                    </div>
+                </div>
+            </Link>
+
+            <Link className={`list-group-item
+                    ${active === 'notifications'?'active':''}`} to="#">
+                <div className="row justify-content-start align-items-center">
+                    <div className="col-3">
+                        <i className="bi bi-bell"></i>
                     </div>
                     <div className="col">
                         <div className="d-none d-xl-block">Notifications</div>
                     </div>
                 </div>
-            </a>
+            </Link>
 
-            <a className={`list-group-item
-                    ${active === 'messages'?'active':''}`}>
+            <Link className={`list-group-item
+                    ${active === 'messages'?'active':''}`} to="#">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
-                        <i className="bi bi-envelope-fill"></i>
+                        <i className="bi bi-envelope"></i>
                     </div>
                     <div className="col">
                         <div className="d-none d-xl-block">Messages</div>
                     </div>
                 </div>
-            </a>
-            <a className={`list-group-item
-                    ${active === 'bookmarks'?'active':''}`}>
+            </Link>
+
+            <Link className={`list-group-item
+                    ${active === 'bookmarks'?'active':''}`} to="#">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
-                        <i className="bi bi-bookmark-fill"></i>
+                        <i className="bi bi-bookmark"></i>
                     </div>
                     <div className="col">
                         <div className="d-none d-xl-block">Bookmarks</div>
                     </div>
                 </div>
-            </a>
+            </Link>
 
-            <a className={`list-group-item
-                    ${active === 'lists'?'active':''}`}>
+            <Link className={`list-group-item
+                    ${active === 'lists'?'active':''}`} to="#">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
                         <i className="bi bi-list-ul"></i>
@@ -89,21 +99,21 @@ const NavigationSidebar = (
                         <div className="d-none d-xl-block">Lists</div>
                     </div>
                 </div>
-            </a>
+            </Link>
 
-            <a className={`list-group-item
-                    ${active === 'profile'?'active':''}`}>
+            <Link className={`list-group-item
+                    ${active === 'profile'?'active':''}`} to="#">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
-                        <i className="bi bi-person-fill"></i>
+                        <i className="bi bi-person"></i>
                     </div>
                     <div className="col">
                         <div className="d-none d-xl-block">Profile</div>
                     </div>
                 </div>
-            </a>
-            <a className={`list-group-item
-                    ${active === 'more'?'active':''}`}>
+            </Link>
+            <Link className={`list-group-item
+                    ${active === 'more'?'active':''}`} to="#">
                 <div className="row justify-content-start align-items-center">
                     <div className="col-3">
                         <i className="bi bi-three-dots"></i>
@@ -112,7 +122,7 @@ const NavigationSidebar = (
                         <div className="d-none d-xl-block">More</div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 };
