@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {likeTuit} from "../reducers/tuits-reducer";
+import {updateTuitThunk}
+    from "../../services/tuits-thunks";
 
 const TuitStats = (
     {
@@ -12,9 +13,11 @@ const TuitStats = (
             "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
             "image": "spacex.png",
             "liked": true,
+            "disliked": false,
             "replies": 123,
             "retuits": 432,
             "likes": 2345,
+            "dislikes": 1,
             "handle": "@spacex",
             "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
         }
@@ -22,7 +25,18 @@ const TuitStats = (
 ) => {
     const dispatch = useDispatch();
     const updateLike = (tuit) => {
-        dispatch(likeTuit(tuit))
+        dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.liked? tuit.likes - 1 : tuit.likes + 1,
+            liked: !tuit.liked
+        }))
+    }
+    const updateDislike = (tuit) => {
+        dispatch(updateTuitThunk({
+            ...tuit,
+            dislikes: tuit.disliked? tuit.dislikes - 1 : tuit.dislikes + 1,
+            disliked: !tuit.disliked
+        }))
     }
 
     return(
@@ -42,7 +56,12 @@ const TuitStats = (
                     {tuit.liked? <i className="bi bi-heart-fill text-danger"></i>: <i className="bi bi-heart-fill"></i>} {tuit.likes}
                 </button>
             </div>
-            <div className="col-3">
+            <div className="col-2">
+                <button type="button" className="btn p-0 text-secondary" onClick={() => updateDislike(tuit)}>
+                    {tuit.disliked? <i className="bi bi-hand-thumbs-down-fill text-danger"></i>: <i className="bi bi-hand-thumbs-down-fill"></i>} {tuit.dislikes}
+                </button>
+            </div>
+            <div className="col-1">
                 <button type="button" className="btn p-0 text-secondary">
                     <i className="bi bi-share text-secondary"></i>
                 </button>
