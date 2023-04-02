@@ -11,7 +11,11 @@ const WhatsHappening = () => {
             tuit: whatsHappening
         }
         dispatch(createTuitThunk(newTuit));
+<<<<<<< HEAD
         setWhatsHappening('')
+=======
+        setWhatsHappening('');
+>>>>>>> test
     }
     return (
         <div className="row">

@@ -15,7 +15,11 @@ const store = configureStore({
     reducer: {
         who: whoReducer,
         tuitsData: tuitsReducer,
+<<<<<<< HEAD
         profile: profileReducer}});
+=======
+        tuitsSummary: profileReducer}});
+>>>>>>> test
 
 function Tuiter() {
     return (
