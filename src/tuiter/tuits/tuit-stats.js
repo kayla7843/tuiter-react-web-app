@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {likeTuit} from "../reducers/tuits-reducer";
+import {updateTuitThunk}
+    from "../../services/tuits-thunks";
 
 const TuitStats = (
     {
@@ -22,7 +23,18 @@ const TuitStats = (
 ) => {
     const dispatch = useDispatch();
     const updateLike = (tuit) => {
-        dispatch(likeTuit(tuit))
+        dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.liked? tuit.likes - 1 : tuit.likes + 1,
+            liked: !tuit.liked
+        }))
+    }
+    const updateDislike = (tuit) => {
+        dispatch(updateTuitThunk({
+            ...tuit,
+            dislikes: tuit.disliked? tuit.dislikes - 1 : tuit.dislikes + 1,
+            disliked: !tuit.disliked
+        }))
     }
 
     return(
@@ -37,12 +49,18 @@ const TuitStats = (
                     <i className="bi bi-arrow-repeat text-secondary"></i> {tuit.retuits}
                 </button>
             </div>
+
             <div className="col-3">
                 <button type="button" className="btn p-0 text-secondary" onClick={() => updateLike(tuit)}>
                     {tuit.liked? <i className="bi bi-heart-fill text-danger"></i>: <i className="bi bi-heart-fill"></i>} {tuit.likes}
                 </button>
             </div>
-            <div className="col-3">
+            <div className="col-2">
+                <button type="button" className="btn p-0 text-secondary" onClick={() => updateDislike(tuit)}>
+                    {tuit.disliked? <i className="bi bi-hand-thumbs-down-fill text-danger"></i>: <i className="bi bi-hand-thumbs-down-fill"></i>} {tuit.dislikes}
+                </button>
+            </div>
+            <div className="col-1">
                 <button type="button" className="btn p-0 text-secondary">
                     <i className="bi bi-share text-secondary"></i>
                 </button>
