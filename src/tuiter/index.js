@@ -15,33 +15,29 @@ const store = configureStore({
     reducer: {
         who: whoReducer,
         tuitsData: tuitsReducer,
-<<<<<<< HEAD
-        profile: profileReducer}});
-=======
         tuitsSummary: profileReducer}});
->>>>>>> test
 
 function Tuiter() {
     return (
         <Provider store={store}>
-        <div className="row mt-2">
-            <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                <Routes>
-                    <Route index element={<NavigationSidebar active="home"/>}></Route>
-                    <Route path="explore" element={<NavigationSidebar active="explore"/>}></Route>
-                </Routes>
+            <div className="row mt-2">
+                <div className="col-2 col-md-2 col-lg-1 col-xl-2">
+                    <Routes>
+                        <Route index element={<NavigationSidebar active="home"/>}></Route>
+                        <Route path="explore" element={<NavigationSidebar active="explore"/>}></Route>
+                    </Routes>
+                </div>
+                <div className="col-10 col-md-10 col-lg-7 col-xl-6"
+                     style={{"position": "relative"}}>
+                    <Routes>
+                        <Route index element={<HomeComponent/>}></Route>
+                        <Route path="/explore" element={<ExploreComponent/>}></Route>
+                    </Routes>
+                </div>
+                <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
+                    <WhoToFollowList/>
+                </div>
             </div>
-            <div className="col-10 col-md-10 col-lg-7 col-xl-6"
-                 style={{"position": "relative"}}>
-                <Routes>
-                    <Route index element={<HomeComponent/>}></Route>
-                    <Route path="/explore" element={<ExploreComponent/>}></Route>
-                </Routes>
-            </div>
-            <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-                <WhoToFollowList/>
-            </div>
-        </div>
         </Provider>
     );
 }

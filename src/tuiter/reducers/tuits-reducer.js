@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import {createSlice}
-    from "@reduxjs/toolkit";
-import tuits from '../tuits/tuits.json';
-import {deleteTuitThunk, findTuitsThunk, createTuitThunk, updateTuitThunk}
-    from "../../services/tuits-thunks";
-=======
 import { createSlice } from "@reduxjs/toolkit";
 import tuits from '../tuits/tuits.json'
 import {findTuitsThunk, deleteTuitThunk, createTuitThunk, updateTuitThunk}
@@ -26,7 +19,6 @@ const templateTuit = {
     "disliked": false,
     "dislikes": 0
 }
->>>>>>> test
 
 const initialState = {
     tuits: [],
@@ -73,18 +65,12 @@ const tuitsSlice = createSlice({
                     ...payload
                 }
             }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> test
     },
     reducers: { }
 });
 
-<<<<<<< HEAD
-=======
 
 export const {createTuit, deleteTuit, likeTuit} = tuitsSlice.actions;
->>>>>>> test
 export default tuitsSlice.reducer;
