@@ -34,7 +34,7 @@ const TuitItem = (
         <li className="list-group-item container-fluid pe-0">
             <div className="row me-0 pe-0">
                 <div className="col-2 col-md-1 pt-1">
-                    <img className="rounded-circle" height={48} src={`/images/${tuit.image}`} alt={""}/>
+                    <img className="rounded-circle" height={48} width={48} src={`/images/${tuit.image}`} alt={""}/>
                 </div>
                 <div className="col-9 col-md-10 ms-2 ps-sm-1 ps-md-4 ps-xxl-3 pe-0 pt-1">
                     <div>
